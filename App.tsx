@@ -1,5 +1,4 @@
 import * as React from 'react';
-
 import {
   StyleSheet,
   View,
@@ -14,14 +13,16 @@ import {
   TrackReferenceOrPlaceholder,
   VideoTrack,
   isTrackReference,
+  registerGlobals,
 } from '@livekit/react-native';
-
 import { Track } from 'livekit-client';
 
-// !! Note !!
-// This sample hardcodes a token which expires in 2 hours.
-const wsURL = "%{wsURL}%"
-const token = "%{token}%"
+// registerGlobals must be called prior to using LiveKit.
+registerGlobals();
+
+// Fill in these values with your own url and token.
+const wsURL = "wss://www.example.com"
+const token = "your-token-here"
 export default function App() {
 
   // Start the audio session first.
@@ -42,6 +43,7 @@ export default function App() {
       token={token}
       connect={true}
       options={{
+        // Use screen pixel density to handle screens with differing densities.
         adaptiveStream: { pixelDensity: 'screen' },
       }}
       audio={true}
@@ -53,11 +55,11 @@ export default function App() {
 };
 
 const RoomView = () => {
-  // Get all camera tracks
+  // Get all camera tracks.
   const tracks = useTracks([Track.Source.Camera]);
 
   const renderTrack: ListRenderItem<TrackReferenceOrPlaceholder> = ({item}) => {
-    // Render using the VideoTrack component
+    // Render using the VideoTrack component.
     if(isTrackReference(item)) {
       return (<VideoTrack trackRef={item} style={styles.participantView} />)
     } else {
