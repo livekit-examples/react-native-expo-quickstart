@@ -9,17 +9,17 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@config-plugins/react-native-webrtc": "^8.0.0",
-    "@livekit/react-native": "^2.1.0",
-    "@livekit/react-native-expo-plugin": "^1.0.0",
-    "@livekit/react-native-webrtc": "^114.1.1",
-    "expo": "~50.0.14",
-    "expo-dev-client": "~3.3.11",
-    "expo-status-bar": "~1.11.1",
-    "react": "18.2.0",
-    "react-native": "0.73.6",
-    "typescript": "^5.3.0",
-    "@types/react": "~18.2.45"
+    "@config-plugins/react-native-webrtc": "^10.0.0",
+    "@livekit/react-native": "^2.5.0",
+    "@livekit/react-native-expo-plugin": "^1.0.1",
+    "@livekit/react-native-webrtc": "^125.0.6",
+    "expo": "^52.0.0",
+    "expo-dev-client": "~5.0.6",
+    "expo-status-bar": "~2.0.0",
+    "react": "18.3.1",
+    "react-native": "0.76.5",
+    "typescript": "~5.3.3",
+    "@types/react": "~18.3.12"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
