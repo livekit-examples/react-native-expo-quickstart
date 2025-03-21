@@ -12,6 +12,12 @@ See more docs and examples on our website: https://docs.livekit.io/
 npm install
 ```
 
+## If building development build (apk)
+
+```
+Remove the app.json 
+```
+
 ## Running
 
 ```
