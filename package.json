@@ -9,21 +9,27 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@config-plugins/react-native-webrtc": "^10.0.0",
-    "@livekit/react-native": "^2.6.2",
-    "@livekit/react-native-expo-plugin": "^1.0.1",
-    "@livekit/react-native-webrtc": "^125.0.8",
-    "expo": "~52.0.36",
-    "expo-dev-client": "~5.0.12",
-    "expo-status-bar": "~2.0.1",
-    "livekit-client": "^2.9.3",
-    "react": "18.3.1",
-    "react-native": "0.76.7",
-    "typescript": "~5.3.3",
-    "@types/react": "~18.3.12"
+    "@config-plugins/react-native-webrtc": "^15.0.2",
+    "@livekit/react-native": "^3.0.0",
+    "@livekit/react-native-expo-plugin": "^1.0.2",
+    "@livekit/react-native-webrtc": "^144.2.0",
+    "@types/react": "~19.2.4",
+    "expo": "~57.0.24",
+    "expo-dev-client": "~57.0.19",
+    "expo-splash-screen": "~57.0.9",
+    "expo-status-bar": "~57.0.1",
+    "livekit-client": "^2.22.3",
+    "react": "19.2.3",
+    "react-native": "0.86.3",
+    "typescript": "~6.0.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.29.0"
   },
-  "private": true
+  "private": true,
+  "overrides": {
+    "@livekit/react-native-expo-plugin": {
+      "@livekit/react-native": "$@livekit/react-native"
+    }
+  }
 }
